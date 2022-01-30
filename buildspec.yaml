@@ -15,7 +15,7 @@ phases:
 
   build:
     commands:
-    - kubectl apply -f dingo-api-configmap.yaml -n $NAMESPACE
+    - kubectl apply -f ./dingo-api-configmap.yaml -n $NAMESPACE
 
 
   post_build:
