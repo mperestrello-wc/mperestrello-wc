@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    AWS_ACCESS_KEY_ID: "eks/access:id"
+    AWS_SECRET_ACCESS_KEY: "eks/access:key"
+
+phases:
+  install:
+    commands:
+
+  pre_build:
+    commands:
+      - aws eks update-kubeconfig --name $CLUSTER
+
+  build:
+    commands:
+    - kubectl apply -f dingo-api-configmap.yaml -n $NAMESPACE
+
+
+  post_build:
+    commands:

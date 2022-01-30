@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  asisa.broker.code: M6658
+  asisa.header: andesonlineptpre.azurewebsites.net:443
+  asisa.url: https://andesonlineptpre.azurewebsites.net:443/sisnet/WSSISNet
+  asisa.user.id: M6658_1
+  asisa.user.pwd: wec@ver.001
+  rna.broker.code: NA
+  rna.header: testesall4pets.rna-2.net
+  rna.url: https://testesall4pets.rna-2.net/webservices/cartoes4PetsV2.asmx
+  rna.user.id: Wecover_a4pets
+  rna.user.pwd: We.Dingo1271
+kind: ConfigMap
+metadata:  
+  name: dingo-api-cfg
+  namespace: dingo-api
+  labels:
+    env: staging
+  
